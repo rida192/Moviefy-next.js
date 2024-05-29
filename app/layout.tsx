@@ -11,7 +11,7 @@ const pacifico = Pacifico({
 });
 
 export const metadata: Metadata = {
-  title: "Create Next App",
+  title: "Moviefy",
   description: "Movies app",
 };
 
