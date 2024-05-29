@@ -35,7 +35,6 @@ const Search = () => {
             className="text-black focus:outline-none py-2 pr-11 pl-4  rounded-full w-[300px] sm:w-[500px] "
             type="text"
             onChange={(e) => setText(e.target.value)}
-            value={text}
           />
           {/* submit button */}
           <button
