@@ -27,42 +27,6 @@ const MoviePage = async ({ params }: { params: { id: string } }) => {
     console.log("this is the error", error);
   }
 
-  // console.log("this is the similer", similerMovies);
-
-  // fetch movie id
-  // const { movieId } = useParams();
-
-  // fetch movie details data
-  // const {
-  //   data: movie,
-  //   isFetching,
-  //   error,
-  //   isLoading,
-  // } = useGetMovieDetailsQuery(movieId);
-
-  // fetch similer movies
-  // const { data: similerMovies } = useGetSimilerMoviesQuery(movieId);
-  // const { data: movieCreadits } = useGetMovieCreaditsQuery(movieId);
-  // const divRef = useRef(null);
-
-  // scroll up onMount
-  // useEffect(() => {
-  //   // @ts-ignore
-  //   divRef?.current?.scrollIntoView({ behavior: "smooth" });
-  // });
-
-  // console.log("movie", movie);
-  // console.log("creadits", movieCreadits);
-  // console.log(similerMovies);
-
-  // return error ? (
-  //   <>Somthing Went Wrong!!</>
-  // ) : isLoading || isFetching ? (
-  //   <>
-  //     <Loader />
-  //   </>
-  // ) :pt-28 pb-28 md:pt-40
-
   return movie ? (
     <MotionDiv
       className="flex flex-col"

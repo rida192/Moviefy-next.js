@@ -19,18 +19,6 @@ const TopMoviePage = async ({ params }: { params: { id: string } }) => {
   } catch (error) {
     console.log("this is the error", error);
   }
-  // fetch similer movies
-  // const { data: similerMovies } = useGetSimilerMoviesQuery(movieId);
-  // const { data: movieCreadits } = useGetMovieCreaditsQuery(movieId);
-  // const divRef = useRef(null);
-
-  // return error ? (
-  //   <>Somthing Went Wrong!!</>
-  // ) : isLoading || isFetching ? (
-  //   <>
-  //     <Loader />
-  //   </>
-  // ) :pt-28 pb-28 md:pt-40
 
   return movie ? (
     <MovieDetails
