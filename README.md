@@ -1,36 +1,75 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Moviefy
 
-## Getting Started
+Moviefy is a Next.js application designed to browse and discover popular and top-rated movies. With an intuitive user interface and seamless navigation, Moviefy offers a delightful experience for movie enthusiasts.
 
-First, run the development server:
+## Preview
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+Check out the Moviefy app [here](https://moviefy-webapp.vercel.app/).
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+![Moviefy Preview](./public/overview.png)
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+## Features
 
-## Learn More
+- **Popular Movies**: Explore the latest popular movies with just a click.
+- **Top Rated Movies**: Discover the highest-rated movies according to user reviews.
+- **Search Functionality**: Find movies by title, genre, or keyword quickly and easily.
+- **Bookmarks**: Add movies to bookmarks quickly and easily.
+- **Pagination**: Navigate through a large collection of movies effortlessly with pagination support.
+- **Tailwind CSS Styling**: Stylish UI powered by Tailwind CSS for a modern look and feel.
 
-To learn more about Next.js, take a look at the following resources:
+## Technologies Used
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+- Neact.js 14
+- Tailwind CSS
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+## Installation
 
-## Deploy on Vercel
+1. Clone the repository:
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+   ```bash
+   git clone https://github.com/rida192/moviefy-next.js.git
+    ```
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+2. **Navigate to the project directory:**
+
+    ```bash
+    cd moviefy-next.js
+    ```
+
+3. **Install dependencies:**
+
+    ```bash
+    npm install
+    ```
+
+4. **Start the development server:**
+
+    ```bash
+    npm run dev
+    ```
+
+5. **Open your browser and visit [http://localhost:3000](http://localhost:3000) to view Moviefy.**
+
+## Usage
+
+- On the homepage, you will see the most popular movies. Click on any movie to view details.
+- Use the search bar at the top to find movies by title, genre, or keyword.
+- Navigate through different pages of movies using pagination controls.
+- Check out the top-rated movies in the dedicated section.
+- Enjoy exploring and discovering new movies!
+
+## Contributing
+
+Contributions are welcome! If you'd like to contribute to Moviefy, please follow these steps:
+
+1. Fork the repository.
+2. Create a new branch (`git checkout -b feature/awesome-feature`).
+3. Make your changes.
+4. Commit your changes (`git commit -am 'Add awesome feature'`).
+5. Push to the branch (`git push origin feature/awesome-feature`).
+6. Create a new Pull Request.
+
+---
+
+**Note:** This project is for educational purposes only. All movie data is fetched from [The Movie Database (TMDb) API](https://www.themoviedb.org/documentation/api) and may be subject to copyright.
