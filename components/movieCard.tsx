@@ -50,14 +50,16 @@ const MovieCard = ({ movie, index }: MovieCardProps) => {
               </motion.button>
             )}
           </div>
-          <h2 className="text-[38px] text-yellow-500 flex justify-center items-center">
-            <AiFillStar />
-            <p className=" text-black text-xs font-bold -ml-[28px]">
+          <div className="relative text-[38px] justify-center items-center">
+            <h2 className=" text-yellow-500">
+              <AiFillStar />
+            </h2>
+            <p className=" absolute text-black text-xs font-bold z-50 top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2">
               {movie?.vote_average === 0 || movie?.vote_average === 10
                 ? movie?.vote_average
                 : (movie?.vote_average).toFixed(1)}
             </p>
-          </h2>
+          </div>
         </div>
         <Link
           aria-label={movie.original_title}
