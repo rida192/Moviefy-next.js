@@ -86,13 +86,10 @@ const MovieDetails = ({
           )}
         </div>
 
-        <Title name={"Similer Movies"} />
+        {similerMovies && similerMovies?.results?.length > 0 && (
+          <Title name={"Similer Movies"} />
+        )}
 
-        {/* <div className="scroller  pb-2 px-1 scroll-px-2 grid grid-flow-col auto-cols-[40%] sm:auto-cols-[30%] md:auto-cols-[21%] gap-4 overflow-x-auto snap-x  [&>*]:snap-start ">
-      {similerMovies?.results?.map((movie) => (
-        <MovieCard key={movie.id} movie={movie} />
-      ))}
-    </div> */}
         <div className="scroller  pb-2 px-1 scroll-px-2 grid grid-flow-col auto-cols-[45%] sm:auto-cols-[40%] md:auto-cols-[30%] lg:auto-cols-[20%]  gap-4 overflow-x-auto snap-x  [&>*]:snap-start ">
           {similerMovies?.results?.map((movie) => (
             <MovieCard key={movie.id} movie={movie} />
