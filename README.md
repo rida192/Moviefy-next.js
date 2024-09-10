@@ -16,11 +16,12 @@ Check out the Moviefy app [here](https://moviefy-webapp.vercel.app/).
 - **Search Functionality**: Find movies by title, genre, or keyword quickly and easily.
 - **Bookmarks**: Add movies to bookmarks quickly and easily.
 - **Pagination**: Navigate through a large collection of movies effortlessly with pagination support.
+- **Dark/Light mode**.
 - **Tailwind CSS Styling**: Stylish UI powered by Tailwind CSS for a modern look and feel.
 
 ## Technologies Used
 
-- Neact.js 14
+- Next.js 14
 - Tailwind CSS
 
 ## Installation
