@@ -67,6 +67,7 @@ const MovieCard = ({ movie, index }: MovieCardProps) => {
         >
           <div className="img-container overflow-hidden h-[150px] sm:h-[200px] ">
             <Image
+              unoptimized
               src={
                 movie?.poster_path
                   ? `https://themoviedb.org/t/p/w220_and_h330_face${movie?.poster_path}`

@@ -54,6 +54,7 @@ const MovieDetails = ({
         <div className="flex flex-col lg:flex-row gap-14 lg:gap-32 mb-7 lg:mb-10 ">
           <div className=" w-[290px] h-[270px] lg:h-[390px]  self-center lg:self-start shadow-[0_5px_20px_0_rgba(0,0,0,0.3)] shadow-black/70 dark:shadow-none">
             <Image
+              unoptimized
               alt="poster image"
               width={200}
               height={200}
