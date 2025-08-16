@@ -15,7 +15,7 @@ const MoviesGrid = ({ moviesList }: MovieGridProps) => {
       <div
         // ref={divRef}
         // layout pt-28 md:pt-40
-        className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 2xl:grid-cols-6 3xl:grid-cols-7  gap-8 place-content-center  fadeAnimate"
+        className="grid grid-cols-2  lg:grid-cols-4 xl:grid-cols-5 2xl:grid-cols-6 3xl:grid-cols-7  gap-8 place-content-center  fadeAnimate"
       >
         {moviesList?.results
           ? moviesList?.results?.map((movie: Movie, index: number) => (
