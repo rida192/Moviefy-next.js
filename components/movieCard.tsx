@@ -7,11 +7,16 @@ import { FaRegBookmark } from "react-icons/fa";
 import { useBookmarkContext } from "../context/bookmarkContext";
 import { AnimatePresence, motion } from "framer-motion";
 import { usePathname } from "next/navigation";
+import path from "path";
 
 const MovieCard = ({ movie, index }: MovieCardProps) => {
   const pathname = usePathname();
   const genre = pathname.split("/")[1];
+  console.log("this is the pathname", pathname);
+  console.log("this is the genre", genre);
   const { addBookmark, removeBookmark, isBookmarked } = useBookmarkContext();
+
+  const IMAGE_BASE_URL = "https://image.tmdb.org/t/p";
 
   return (
     movie.original_title !== "Così fan tutte" && (
@@ -52,14 +57,15 @@ const MovieCard = ({ movie, index }: MovieCardProps) => {
         </div>
         <Link
           aria-label={movie.original_title}
-          href={`/${genre ? genre : "movies"}/${movie.id}`}
+          href={`/${genre!! ? genre : "movies"}/${movie.id}`}
         >
           <div className="img-container overflow-hidden h-[150px] sm:h-[200px] ">
             <Image
               unoptimized
+              priority
               src={
                 movie?.poster_path
-                  ? `https://image.tmdb.org/t/p/w220_and_h330_face${movie?.poster_path}`
+                  ? `${IMAGE_BASE_URL}/w500${movie.poster_path}`
                   : "https://cdn4.iconfinder.com/data/icons/small-n-flat/24/movie-alt2-512.png"
               }
               alt="cover image"
