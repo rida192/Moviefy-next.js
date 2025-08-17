@@ -11,10 +11,12 @@ const MovieDetails = ({
   movieCreadits,
   similerMovies,
 }: MovieDetailsProps) => {
+
   console.log("RAW API DATA:", {
     poster_path: movie?.poster_path,
     full_url: `https://image.tmdb.org/t/p/w500${movie?.poster_path}`,
   });
+
 
   return (
     <MotionDiv
@@ -58,6 +60,7 @@ const MovieDetails = ({
         </div>
         <div className="flex flex-col lg:flex-row gap-14 lg:gap-32 mb-7 lg:mb-10 ">
           <div className=" w-[290px] h-[270px] lg:h-[390px]  self-center lg:self-start shadow-[0_5px_20px_0_rgba(0,0,0,0.3)] shadow-black/70 dark:shadow-none">
+
             <img
               loading="eager"
               alt="poster image"
@@ -66,6 +69,7 @@ const MovieDetails = ({
               src={`https://image.tmdb.org/t/p/w500${movie?.poster_path}`}
               className="object-fit max-h-full w-full"
             />
+
           </div>
           <div className="flex-1">
             <div className="mb-8">

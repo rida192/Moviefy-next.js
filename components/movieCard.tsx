@@ -12,9 +12,9 @@ import path from "path";
 const MovieCard = ({ movie, index }: MovieCardProps) => {
   const pathname = usePathname();
   const genre = pathname.split("/")[1];
+  console.log("this is the pathname", pathname);
+  console.log("this is the genre", genre);
   const { addBookmark, removeBookmark, isBookmarked } = useBookmarkContext();
-
-  // Usage:
 
   return (
     movie.original_title !== "Così fan tutte" && (
@@ -61,6 +61,7 @@ const MovieCard = ({ movie, index }: MovieCardProps) => {
             <img
               loading="eager"
               src={`https://image.tmdb.org/t/p/w500${movie?.poster_path}`}
+
               alt="cover image"
               className="rounded-lg h-full w-full transition duration-200 object-fit aspect-auto"
               width={220}
