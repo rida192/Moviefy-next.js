@@ -11,9 +11,12 @@ const MovieDetails = ({
   movieCreadits,
   similerMovies,
 }: MovieDetailsProps) => {
-  const IMAGE_BASE_URL = "https://image.tmdb.org/t/p";
 
-  //image.tmdb.org/t/p/w500/1E5baAaEse26fej7uHcjOgEE2t2.jpg
+  console.log("RAW API DATA:", {
+    poster_path: movie?.poster_path,
+    full_url: `https://image.tmdb.org/t/p/w500${movie?.poster_path}`,
+  });
+
 
   return (
     <MotionDiv
@@ -57,21 +60,16 @@ const MovieDetails = ({
         </div>
         <div className="flex flex-col lg:flex-row gap-14 lg:gap-32 mb-7 lg:mb-10 ">
           <div className=" w-[290px] h-[270px] lg:h-[390px]  self-center lg:self-start shadow-[0_5px_20px_0_rgba(0,0,0,0.3)] shadow-black/70 dark:shadow-none">
-            {movie?.poster_path && (
-              <Image
-                unoptimized
-                priority
-                alt="poster image"
-                width={200}
-                height={200}
-                src={
-                  movie?.poster_path
-                    ? `${IMAGE_BASE_URL}/w500${movie.poster_path}`
-                    : "https://cdn4.iconfinder.com/data/icons/small-n-flat/24/movie-alt2-512.png"
-                }
-                className="object-fit max-h-full w-full"
-              />
-            )}
+
+            <img
+              loading="eager"
+              alt="poster image"
+              width={200}
+              height={200}
+              src={`https://image.tmdb.org/t/p/w500${movie?.poster_path}`}
+              className="object-fit max-h-full w-full"
+            />
+
           </div>
           <div className="flex-1">
             <div className="mb-8">

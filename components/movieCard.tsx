@@ -16,8 +16,6 @@ const MovieCard = ({ movie, index }: MovieCardProps) => {
   console.log("this is the genre", genre);
   const { addBookmark, removeBookmark, isBookmarked } = useBookmarkContext();
 
-  const IMAGE_BASE_URL = "https://image.tmdb.org/t/p";
-
   return (
     movie.original_title !== "Così fan tutte" && (
       <motion.div
@@ -57,17 +55,13 @@ const MovieCard = ({ movie, index }: MovieCardProps) => {
         </div>
         <Link
           aria-label={movie.original_title}
-          href={`/${genre!! ? genre : "movies"}/${movie.id}`}
+          href={`/${genre ? `${genre}/${movie.id}` : `movies/${movie.id}`}`}
         >
           <div className="img-container overflow-hidden h-[150px] sm:h-[200px] ">
-            <Image
-              unoptimized
-              priority
-              src={
-                movie?.poster_path
-                  ? `${IMAGE_BASE_URL}/w500${movie.poster_path}`
-                  : "https://cdn4.iconfinder.com/data/icons/small-n-flat/24/movie-alt2-512.png"
-              }
+            <img
+              loading="eager"
+              src={`https://image.tmdb.org/t/p/w500${movie?.poster_path}`}
+
               alt="cover image"
               className="rounded-lg h-full w-full transition duration-200 object-fit aspect-auto"
               width={220}
