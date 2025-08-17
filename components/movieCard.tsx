@@ -53,7 +53,7 @@ const MovieCard = ({ movie, index }: MovieCardProps) => {
             )}
           </div>
         </div>
-        <Link aria-label={movie.original_title} href={`${genre}/${movie.id}`}>
+        <Link aria-label={movie.original_title} href={`/${genre}/${movie.id}`}>
           <div className="img-container overflow-hidden h-[150px] sm:h-[200px] ">
             <Image
               unoptimized
