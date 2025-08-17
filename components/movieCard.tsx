@@ -53,15 +53,11 @@ const MovieCard = ({ movie, index }: MovieCardProps) => {
             )}
           </div>
         </div>
-        <Link
-          aria-label={movie.original_title}
-          href={`/${genre ? `${genre}/${movie.id}` : `movies/${movie.id}`}`}
-        >
+        <Link aria-label={movie.original_title} href={`${genre}/${movie.id}`}>
           <div className="img-container overflow-hidden h-[150px] sm:h-[200px] ">
             <img
               loading="eager"
               src={`https://image.tmdb.org/t/p/w500${movie?.poster_path}`}
-
               alt="cover image"
               className="rounded-lg h-full w-full transition duration-200 object-fit aspect-auto"
               width={220}
